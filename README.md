@@ -45,6 +45,11 @@ cd Team2-GenomeAssembly
 ## Short description
 `./assembly.sh` will automatically evaluates the QC for the raw input reads  and do the proper trimming to perform the assmebly outcome for you. 
 
+## Paramaters
+The pipeline will trim the raw reads at (average Q-score minus 5) for a gentle trimming cutoff.
+During assembly, both paired and unpaired reads will be used by SPAdes. The --careful flag will be used to produce better results.
+Please refer to [FaQCs](https://github.com/LANL-Bioinformatics/FaQCs) and [SPAdes](http://cab.spbu.ru/software/spades/) for detailed discription.
+
 * The script will generate a trimming directory for each pair in your input file directory and be named  **trimmed** if `-t` is used.
 * The script will generate a directory containing quast report for each pair in your input file directory and be named  **quast** if `-q` is used.
 * All the assemblies will be in the Assembled\_Contigs directory under Input directory and each name will be  **\<Paired file name\>\_contigs.fasta**.

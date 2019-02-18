@@ -45,7 +45,7 @@ cd Team2-GenomeAssembly
 ## Short description
 `./assembly.sh` will automatically evaluates the QC for the raw input reads  and do the proper trimming to perform the assmebly outcome for you. 
 
-## Paramaters
+**Paramaters**:
 The pipeline will trim the raw reads at (average Q-score minus 5) for a gentle trimming cutoff.
 During assembly, both paired and unpaired reads will be used by SPAdes. The --careful flag will be used to produce better results.
 Please refer to [FaQCs](https://github.com/LANL-Bioinformatics/FaQCs) and [SPAdes](http://cab.spbu.ru/software/spades/) for detailed discription.

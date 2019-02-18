@@ -10,11 +10,9 @@ while getopts "i:tqgh" opt; do
 		i)
 			dir=$OPTARG;;
 		t)
-			$t=1;;
+			t=1;;
 		q)
-			$q=1;;
-		g)
-			$g=1;;
+			q=1;;
 		h)
 			echo "cmd: ./assmebly.sh -i input_dir "
 			exit 0
@@ -117,7 +115,7 @@ do
 	
 	i=$[i+1]
 done
-	rm -r $datapath/assembled/*_assemb
+rm -r $datapath/assembled
 
 if [ "$t" -eq "0" ]; then
 	rm -r $datapath/trimmed

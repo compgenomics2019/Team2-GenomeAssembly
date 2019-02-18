@@ -28,7 +28,7 @@ git clone https://github.gatech.edu/compgenomics2019/Team2-GenomeAssembly
 cd Team2-GenomeAssembly
 # you are required to put all the raw input reads in one directory 
 ```
-### Synopsis
+##Synopsis
 
 **Input options**: One input directory must be spefied.
 

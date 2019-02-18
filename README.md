@@ -2,7 +2,7 @@
 
 ## SUMMARY
 
-Hello! This pipeline is designed by Team 2, Group 1. The purpose is to assemble genomes from PE Illumina reads
+This pipeline is designed by Team 2, Group 1. The purpose is to assemble genomes from PE Illumina reads
 in a manner that checks the quality of reads and executes the necessary quality controls. 
 
 This pipeline features tools including FaQCs, SPAdes, and QUAST. These are responsible for trimming, assembly,
@@ -32,7 +32,7 @@ cd Team2-GenomeAssembly
 
 **Input options**: One input directory must be spefied.
 
-`-i` Raw data directory: specify the path of your input directory. You could have several files in the directory. The script will assemble all the raw data for you.
+`-i` Raw data directory: specify the path of your input directory. You could have several files in the directory. The script will assemble all the raw data for you. The raw data must be **fastq** file.
 
 
 **Other options**: 

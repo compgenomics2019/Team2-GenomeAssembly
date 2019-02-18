@@ -35,8 +35,10 @@ datapath=${PWD}/$dir
 
 # ==============================Trimming using FaQCs===========================================
 # creates 2 new dir's per paired reads: *_qc and *_trimmed; removes *_qc upon completion.
-
-mkdir $datapath/trimmed
+if [ ! -d $datapath/trimmed ];
+then 
+    mkdir $datapath/trimmed
+fi
 
 
 # list_reads is a list of all of the reads
@@ -94,7 +96,15 @@ rm -r $datapath/trimmed/*_qc
 list_trimmedDirs="$(ls -d $datapath/trimmed/*trimmed/)"
 numOfTrimmedDirs="$(ls -d $datapath/trimmed/*trimmed/ | wc -l)"
 
-mkdir $datapath/quast
+if [ ! -d $datapath/quast ];
+then 
+    mkdir $datapath/quast
+fi
+if [ ! -d $datapath/Assembled_Contigs ];
+then 
+    mkdir $datapath/Assembled_Contigs
+fi
+
 i=1
 while [ $i -le $numOfTrimmedDirs ]
 do 
@@ -108,9 +118,7 @@ do
 	# checking with Quast
 	quast.py $datapath/assembled/"$prefix"_assemb/contigs.fasta -o $datapath/quast/"$prefix"
 	
-	# Write assembly to ./dataset/Assembled_Contigs
-	mkdir $datapath/Assembled_Contigs
-	
+	# Write assembly to ./dataset/Assembled_Contigs	
 	cat $datapath/assembled/"$prefix"_assemb/contigs.fasta > $datapath/Assembled_Contigs/"$prefix"_contigs.fasta
 	
 	i=$[i+1]

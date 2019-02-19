@@ -43,7 +43,7 @@ cd Team2-GenomeAssembly
 `-q` Remain the Quast report for your reference, all the report will be in the **quast** directory under Input directory
 
 ## Short description
-`./assembly.sh` will automatically evaluates the QC for the raw input reads  and do the proper trimming to perform the assmebly outcome for you. 
+`./assembly.sh` will automatically evaluates the QC for the raw input reads  and do the proper trimming to perform the assembly outcome for you. 
 
 **Paramaters**:
 The pipeline will trim the raw reads at (average Q-score minus 5) for a gentle trimming cutoff.

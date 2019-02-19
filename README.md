@@ -31,7 +31,7 @@ cd Team2-GenomeAssembly
 
 ## Synopsis
 
-**Input options**: One input directory must be spefied.
+**Input options**: One input directory must be specifed.
 
 `-i` Raw data directory: specify the path of your input directory. You could have several files in the directory. The script will assemble all the raw data for you. The raw data must be **fastq** files.
 

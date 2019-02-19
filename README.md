@@ -62,6 +62,6 @@ Please refer to [FaQCs](https://github.com/LANL-Bioinformatics/FaQCs) and [SPAde
 Only specify the Input dataset directory 
 ./assembly.sh -i ./dataset 
 
-Remain the trimming data and quast result
+Keep the trimming data and quast results
 ./assembly.sh -i ./dataset -q -t
 ```
